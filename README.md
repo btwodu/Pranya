@@ -38,6 +38,10 @@ trainer, the Bonus Streak check, then cuts the network and reloads.
 `dist/` is a static site with relative paths, so it works from a domain root or a subfolder. Upload it to
 any HTTPS static host (GitHub Pages, Netlify, Cloudflare Pages). HTTPS is required for the service worker.
 
+This repo deploys itself to GitHub Pages: `.github/workflows/deploy.yml` runs the tests, builds and
+publishes on every push to `main`. One-time setup: Settings > Pages > Source: "GitHub Actions". The app
+is then served at `https://<owner>.github.io/<repo>/`.
+
 To install on iPhone: open the URL in Safari, Share, Add to Home Screen. Open it once while online; after
 that everything works with no connection. New versions install themselves the next time the app is opened
 online.
