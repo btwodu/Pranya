@@ -48,7 +48,7 @@ export function nextQuestion(
 ): Question {
   const targets = mode === 'weak' ? weakSpots(stats) : [];
   let question = makeQuestion(game, pays, dealHand(rand));
-  for (let tries = 0; tries < 40; tries++) {
+  for (let tries = 0; tries < 20; tries++) {
     const wanted = targets.length
       ? targets.includes(question.category)
       : question.result.bestMask !== 0 || rand() < 0.25;
